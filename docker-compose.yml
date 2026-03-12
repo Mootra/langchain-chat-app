@@ -1,0 +1,16 @@
+services:
+  chat-langchain:
+    build: .
+    container_name: chat-langchain
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - backend/.env
+
+    volumes:
+      - ./backend:/app/backend
+      - ./data:/var/lib/data
+
+    restart: unless-stopped
