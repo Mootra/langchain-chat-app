@@ -24,6 +24,7 @@ COPY . .
 # Set environment variables
 # PYTHONPATH ensures backend modules can be imported correctly
 ENV PYTHONPATH=/app/backend
+
 # DATA_DIR for persistence (will be mounted to a disk in Render)
 ENV DATA_DIR=/var/lib/data
 
